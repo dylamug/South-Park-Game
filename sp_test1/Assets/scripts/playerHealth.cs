@@ -43,6 +43,11 @@ public class playerHealth : MonoBehaviour
             pHealth -= 10;
         }
 
+        if (col.gameObject.tag == "Bullet")
+        {
+            Debug.Log("hit by bullet");
+        }
+
 
 
 

@@ -6,8 +6,8 @@ public class basicController : MonoBehaviour
 {
 
 
-    float vertSpeed = 10;
-    float runSpeed = 20;
+    float vertSpeed = 3;
+    float runSpeed = 7;
     float rotSpeed = 100;
     float translation;
     float rotation;
@@ -127,6 +127,11 @@ public class basicController : MonoBehaviour
                    translation = Input.GetAxis("Vertical") * vertSpeed * Time.deltaTime;
                     moveSpeed = vertSpeed;
                 }
+            }
+
+            else if (Input.GetKey(KeyCode.S))
+            {
+                myAnim.SetInteger("Walking", -1);
             }
 
 

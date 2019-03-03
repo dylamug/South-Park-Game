@@ -12,6 +12,8 @@ TagManager:
   - Ball
   - CombatManager
   - Enemy
+  - Bullet
+  - GunShooter
   layers:
   - Default
   - TransparentFX

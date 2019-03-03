@@ -21,6 +21,10 @@ public class CopScript : MonoBehaviour
     private float attackDistance = 8f;
     private float goBackToChasingDistance =10f;
     public bool is_Stopped;
+
+    public GunShooter shooty;
+
+    
   
     public bool waiting = true;
 
@@ -51,6 +55,8 @@ public class CopScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        
         myAgent = GetComponent<NavMeshAgent>();
 
         myAnim = GetComponent<Animator>();
@@ -264,10 +270,16 @@ public class CopScript : MonoBehaviour
         
     }
 
+    void FireTheGun()
+    {
+        shooty.FireGun();
+    }
     void makeWaitingTrue()
     {
         waiting = true;
     }
+
+    
 
     //void Death()
     //{
