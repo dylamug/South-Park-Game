@@ -56,12 +56,14 @@ public class ObjectPooler : MonoBehaviour
             objectToSpawn.SetActive(true);
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
+        objectToSpawn.transform.LookAt(playerLocation);
+        objectToSpawn.transform.localEulerAngles = new Vector3(0, objectToSpawn.transform.localEulerAngles.y, objectToSpawn.transform.localEulerAngles.z);
 
 
-        bulletTarget = playerLocation.position - gameObject.transform.position;
 
-        myRig = objectToSpawn.GetComponent<Rigidbody>();
-        myRig.AddForce(bulletTarget * 100);
+        //myRig = objectToSpawn.GetComponent<Rigidbody>();
+        //myRig.AddForce(bulletTarget * 300);
+
 
         poolDictionary[tag].Enqueue(objectToSpawn);
         
