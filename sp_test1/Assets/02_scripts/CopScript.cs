@@ -84,6 +84,7 @@ public class CopScript : MonoBehaviour
         playerDist = Vector3.Distance(transform.position, PlayerLocation.position);
         is_Stopped = myAgent.isStopped;
         
+        
        
         //if (charHealth.isDead == true)
         //{
@@ -216,7 +217,10 @@ public class CopScript : MonoBehaviour
         
         transform.LookAt(PlayerLocation);
         myAgent.isStopped = true;
-
+        if (playerDist >= goBackToChasingDistance)
+        {
+            myModes = RNModes.Chasing;
+        }
 
 
         myAnim.SetInteger("Walking", 7);

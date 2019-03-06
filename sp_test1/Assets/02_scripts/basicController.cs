@@ -103,7 +103,7 @@ public class basicController : MonoBehaviour
             moveSpeed = 0;
 
             rotation = 0;
-            Debug.Log("dongs");
+            
         }
         else
         {
@@ -131,7 +131,16 @@ public class basicController : MonoBehaviour
 
             else if (Input.GetKey(KeyCode.S))
             {
-                myAnim.SetInteger("Walking", -1);
+                if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space))
+                {
+                    myAnim.SetTrigger("Dodge");
+                }
+
+                else
+                {
+                    myAnim.SetInteger("Walking", -1);
+                }
+                
             }
 
 
@@ -140,10 +149,7 @@ public class basicController : MonoBehaviour
                 myAnim.SetInteger("Walking", 0);
             }
 
-            if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space))
-            {
-                myAnim.SetTrigger("Dodge");
-            }
+           
         }
     }
 
@@ -190,7 +196,7 @@ public class basicController : MonoBehaviour
 
     void combatManager()
     {
-        Debug.Log(t);
+
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && t <= Time.time)
         {

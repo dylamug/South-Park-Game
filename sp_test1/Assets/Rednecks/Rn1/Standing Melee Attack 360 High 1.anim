@@ -53929,7 +53929,7 @@ AnimationClip:
     m_LoopBlendOrientation: 1
     m_LoopBlendPositionY: 1
     m_LoopBlendPositionXZ: 0
-    m_KeepOriginalOrientation: 0
+    m_KeepOriginalOrientation: 1
     m_KeepOriginalPositionY: 0
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 1
@@ -106918,14 +106918,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.93333334
-    functionName: startAttacking
+    functionName: beginAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.9333333
-    functionName: finishedAttacking
+  - time: 1.2333333
+    functionName: increaseAttackCounter
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
